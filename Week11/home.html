@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Caleb Lyons - 4/13/2026 -->
+
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us</title>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+    <h3>Contact Our Team</h3>
+    <p>Please complete the form below and we’ll get back to you as soon as possible.</p>
+
+
+
+    <form action="https://webdevbasics.net/scripts/demo.php" method="post">
+        
+        <label for="FullName">Your Full Name:</label>
+        <input id="FullName" name="FullName" type="text" required>
+
+        <label for="EmailAddress">Your Email Address:</label>
+        <input id="EmailAddress" name="EmailAddress" type="text" required>
+        
+        <label for="PhoneNumber">Your Phone Number:</label>
+        <input id="PhoneNumber" name="PhoneNumber" type="text" required>
+
+        <label for="Topic">How can we help you?</label>
+        <select id="Topic" name="Topic" size="1" required>
+            <option value="" disabled selected>Please Select</option>
+
+            <Option value="General Inquiry">General Inquiry</Option>
+            <Option value="Support">Support</Option>
+            <Option value="Feedback">Feedback</Option>
+        </select>
+        
+        <label for="Message">Write Your Message Here:</label>
+        <textarea name="Message" id="Message" rows="5" required></textarea>
+
+        <input type="submit" value="Send Message">
+
+    </form>
+
+
+</body>
+</html>
