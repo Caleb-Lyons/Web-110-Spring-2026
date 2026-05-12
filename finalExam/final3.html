@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- Caleb Lyons - 5/11/2026 - Final Project for HTML/CSS -->
+
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bear Wiki: Contact</title>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/svg" href="Icons/favicon-light.svg" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/svg" href="Icons/favicon-dark.svg" media="(prefers-color-scheme: dark)">
+</head>
+
+<body>
+
+  <nav class="navbar"><a href="final1.html">The Bear Wiki</a><ul>
+      <li><a href="final2.html#Brown_Bear">Browse Bears</a></li>
+      <li><a href="final3.html">Contact</a></li>
+      <li><a href="final4.html">Credits</a></li>
+  </ul></nav>
+
+  <main>
+    <div>
+      <h1>Contact</h1>
+      <form>
+
+        <div><label for="reason">Reason: </label><select name="reason" id="reason" size="1">
+          <option value="Interest" selected>Express interest</option>
+          <option value="Suggest">Suggest a change</option>
+          <option value="Report">Report bug or incorrect information</option>
+          <option value="Other">Other</option>
+        </select></div>
+
+        <div><label for="Title">Title: </label><input type="text" name="Title" id="Title"></div>
+        <textarea name="Message" id="Message" rows="10">
+Hey Caleb,
+
+I'm reaching out because ...
+        </textarea>
+
+        <h3>What page are you talking about?</h3>
+        <div><input type="radio" name="which" id="Home"><label for="Home">The homepage</label></div>
+        <div><input type="radio" name="which" id="Details"><label for="Details">The bear details page</label></div>
+        <div><input type="radio" name="which" id="Contact"><label for="Contact">This page: the contact page</label></div>
+        <div><input type="radio" name="which" id="Credits"><label for="Credits">The credits page</label></div>
+
+        <div>
+          <input type="checkbox" name="checkbox" id="checkbox"><label for="checkbox">Include a date</label>
+        </div>
+
+        <div class="date">
+          <label for="date">Enter date: </label><input type="date" name="date" id="date">
+        </div>
+
+        <div>
+          <input type="Reset" value="Reset">
+          <input type="Submit" value="Submit">
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer><div>
+
+  <div><p>/*</p><p>Written, coded, and designed by Caleb Lyons. No generative tools were used.</p><p> */</p></div>
+      
+
+  <nav><ul>
+    <li><a href="final1.html">Homepage</a></li>
+    <li><a href="final2.html#Brown_Bear">Browse Bears</a></li>
+    <li><a href="final3.html">Contact</a></li>
+    <li><a href="final4.html">Credits</a></li>
+  </ul></nav>
+
+  </div></footer>
+
+</body>
+</html>

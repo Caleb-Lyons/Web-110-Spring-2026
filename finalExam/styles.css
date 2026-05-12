@@ -1,0 +1,393 @@
+/* Caleb Lyons - 5/11/2026 - Final Project for HTML/CSS */
+
+@font-face {
+    font-family: Luckiest_Guy;
+    src: url(Fonts/LuckiestGuy-Regular.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+    background-image: url(Images/background.png);
+    background-size: contain;
+    background-repeat: repeat;
+    background-color: rgb(255, 241, 234);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    border: none;
+    flex-wrap: wrap;
+}
+
+img, .menu a {
+    background-color: #c7bcb1;
+    flex: 1 1 0;
+    padding: 1rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    min-height: 30vh;
+    max-height: 75vh;
+    
+}
+
+img {
+    padding: 0;
+    margin-top: 2.5rem;
+    max-height: none;
+    flex: initial
+}
+
+div {
+    gap: 1rem;
+
+
+    div {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+title, section, script, .showOnMobile, .showOnTablet {
+    display: none;
+}
+
+section:target {
+    display: flex;
+    gap: 1rem;
+}
+
+section:target p, section:target a {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin: 4vw 4vw 6vw 4vw;
+    align-items: center;
+    gap: 7.5rem;
+
+    > div, section {
+        width: 100%;
+        max-width: max(60rem, 60vw);
+    }
+}
+
+input[type=submit], input[type=reset], .button, button, .menu a {
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    width: fit-content;
+    flex-direction: row;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    background-color: #be6b52;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    padding-right: 1.125rem;
+
+    img {
+        height: 1.5rem;
+        width: 1.5rem;
+        max-height: unset;
+        min-height: unset;
+        padding: 0;
+        border-radius: 0;
+    }
+}
+
+input[type=submit]:hover, input[type=reset]:hover, .button:hover, button:hover {
+    background-color: #d17b60;
+    text-decoration: none;
+}
+
+.copy:hover img {
+    content: url(Icons/copy.svg);
+}
+
+input[type=submit]:active, input[type=reset]:active, .button:active, button:active {
+    background-color: #9f5640;
+}
+
+h1, h2, .menu a {
+    font-family: Luckiest_Guy;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+
+h2, h1, .menu a {
+    line-height: 1.25;
+    font-size: 2.5rem;
+
+}
+
+h2, h1 {
+    padding-top: 3rem;
+}
+
+h3, label {
+    line-height: 1.25;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+p, label[for=checkbox], label[for=Details], label[for=Contact], label[for=Home], label[for=Credits], input, select, textarea {
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 1.125rem;
+}
+
+.navbar {
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1.5vw 4vw;
+    width: 100vw;
+    align-items: center;
+    backdrop-filter: blur(100vw);
+    background-color: rgba(255, 241, 234, 0.65);
+    z-index: 999;
+    background-image: url(Images/background.png);
+    background-size: cover;
+
+    ul, li, a {
+        display: flex;
+        flex-direction: row;
+        float: left;
+        max-inline-size: 100%;
+    }
+
+    li {
+        padding: 1rem;
+        line-height: 1rem;
+    }
+
+    a {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: black;
+    }
+
+    > a {
+        font-family: Luckiest_Guy;
+        letter-spacing: 1px;
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin-right: auto;
+        text-decoration: none;
+    }
+}
+
+ol {
+    display: inline;
+    list-style-type:decimal;
+    line-height: 2rem;
+}
+
+footer {
+    padding: 1.5vw 4vw;
+    align-items: center;
+    flex-direction: column;
+
+    nav, div {  
+        max-width: max(60rem, 70vw);
+        max-inline-size: 100%;
+        div {
+            flex-wrap: nowrap;
+            width: max-content;
+            display: flex;
+            flex-direction: row;     
+            align-items: center;
+
+            p {
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                color: rgb(0, 88, 1);
+                text-wrap: wrap;
+            }
+
+            p:first-child {
+                align-self: flex-start;
+            }
+
+            p:last-child {
+                align-self: flex-end;
+            }
+        }
+
+        ul {
+            width: 100%;
+        }
+
+        ul, li, a {
+            display: flex;
+            flex-direction: row;
+            float: left;
+            max-inline-size: 100%;
+            flex-wrap: nowrap;
+        }   
+        li {
+            width: 100%;
+        }
+
+        li:last-child {
+            width: fit-content;
+        }
+
+        a {
+            text-align: center;
+            color: black;
+        }
+    }
+}
+
+.menu {
+    gap: 1rem;
+    flex-direction: row;
+    transform: scale(1, -1);
+    overflow: hidden;
+    
+
+    a {
+        background-blend-mode: multiply;
+        transform: scale(1, -1);
+        flex: 1 1 0;
+        width: 100%;
+        aspect-ratio: 16/9;
+        background-color: #be6b52;
+        min-height: 10rem;
+        align-content: center;
+        max-height: 30rem;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        text-shadow: 0 0 1rem #000000;
+        line-height: 2.5rem;
+    }
+    
+    .American_Black_Bear {
+        background-image: url(Images/American_Black_Bear.jpg);
+        
+    }
+
+    .Brown_Bear {
+    background-image: url(Images/Brown_Bear.jpg);
+    background-color: #cf7e65;
+    }
+    
+    .Asian_Black_Bear {
+    background-image: url(Images/Asian_Black_Bear.jpg);
+    background-color: #de927b;
+    }
+    
+    .Sun_Bear {
+    background-image: url(Images/Sun_Bear.jpg);
+    background-color: #df9e8b;
+    }
+
+    .Polar_Bear {
+    background-image: url(Images/Polar_Bear.jpg);
+    background-color: #efb8a8;;
+    }
+
+}
+
+section > div > div {
+    transform: scale(1, -1);
+}
+
+form {
+
+    gap: 1rem;
+
+    textarea {
+        padding: 2rem;
+    }
+
+    input[type=text], input[type=date], select {
+        padding: 0.5rem;
+        width: 50%;
+    }
+
+    div:has(input[type=checkbox]) {
+        margin-top: 1rem;
+    }
+
+    div:has(input[type=date]) {
+        display: none;
+    }
+
+    div:has(input[type=checkbox]:checked) ~ div:has(input[type=date]) {
+        display: flex;
+    }
+
+    div {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+}
+
+
+@media (max-width: 1100px) {
+
+    .hideOnTablet {
+        display: none;
+    }
+
+    .showOnTablet {
+        display: flex;
+    }
+    
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 630px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar li:first-child {
+        padding-left: 0;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .showOnMobile {
+        display: flex;
+    }
+    
+    html {
+        background-size: 100rem;
+    }
+
+}
